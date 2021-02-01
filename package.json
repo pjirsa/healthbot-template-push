@@ -1,0 +1,27 @@
+{
+  "name": "hlth-bot-devops",
+  "version": "1.0.0",
+  "description": "demo of managing azure healthbot with CI/CD",
+  "main": "dist/index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pjirsa/hlth-bot-devops.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pjirsa/hlth-bot-devops/issues"
+  },
+  "homepage": "https://github.com/pjirsa/hlth-bot-devops#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.6",
+    "@actions/github": "^4.0.0"
+  }
+}
