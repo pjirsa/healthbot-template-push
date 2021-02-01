@@ -1,7 +1,7 @@
 {
   "name": "hlth-bot-devops",
   "version": "1.0.0",
-  "description": "",
+  "description": "Forked from https://github.com/microsoft/HealthBotCodeSnippets",
   "main": "healthAgentAPI.js",
   "dependencies": {
     "request": "^2.82.0",
