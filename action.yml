@@ -1,13 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Get Scenarios'
+description: 'Get scenarios from Azure Health Bot API'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  tenant-name:
+    description: 'Azure Health Bot Tenant Name'
     required: true
-    default: 'World'
+  api-secret:
+    description: 'API JWT Secret from Health Bot'
+    required: true
 outputs:
-  time: # id of output
-    description: 'The time we greeted you'
+  scenarios: # id of output
+    description: 'Health Bot Scenario templates'
 runs:
   using: 'node12'
   main: 'dist/index.js'
