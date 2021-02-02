@@ -14,19 +14,34 @@ try {
   }, jwtSecret);
 
   const options = {
-    method: 'GET',
+    method: 'POST',
     uri: `${BASE_URL}api/account/${tenantName}/scenarios`,
     headers: {
-      'Authorization': 'Bearer ' + jwtToken
-    }
-  };
+        'Authorization': 'Bearer ' + jwtToken
+    },
+    body: [
+        {
+            "name":"Hello World",
+            "scenario_trigger":"hello_world",
+            "description":"",
+            "code":"{\n  \"version\": 2,\n  \"steps\": [\n    {\n      \"id\": \"aaa3073dc553-32a44525cced8e2f-2200\",\n      \"type\": \"statement\",\n      \"designer\": {\n        \"xLocation\": 479,\n        \"yLocation\": 196\n      },\n      \"text\": \"Hello World!\"\n    }\n  ]\n}"
+        },
+        {
+            "name":"Greetings",
+            "scenario_trigger":"greetings",
+            "description":"",
+            "code":"{\n  \"version\": 2,\n  \"steps\": [\n    {\n      \"id\": \"aaa3073dc553-32a44525cced8e2f-2200\",\n      \"type\": \"statement\",\n      \"designer\": {\n        \"xLocation\": 479,\n        \"yLocation\": 196\n      },\n      \"text\": \"Greetings!\"\n    }\n  ]\n}"
+        }
+    ],
+    json: true
+};
 
-  rp(options)
+rp(options)
     .then(function (parsedBody) {
-      console.log(parsedBody);
+        console.log(parsedBody);
     })
     .catch(function (err) {
-      console.log(err.message);
+        console.log(err.message);
     });
 
 } catch (error) {

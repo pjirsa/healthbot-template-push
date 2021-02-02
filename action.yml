@@ -1,5 +1,5 @@
-name: 'Get Scenarios'
-description: 'Get scenarios from Azure Health Bot API'
+name: 'Push Scenarios'
+description: 'Push Scenarios to Azure Health Bot API'
 inputs:
   tenant-name:
     description: 'Azure Health Bot Tenant Name'
@@ -7,9 +7,9 @@ inputs:
   api-secret:
     description: 'API JWT Secret from Health Bot'
     required: true
-outputs:
-  scenarios: # id of output
-    description: 'Health Bot Scenario templates'
+  template-file:
+    description: 'JSON file containing templates to push'
+    required: true
 runs:
   using: 'node12'
   main: 'dist/index.js'
