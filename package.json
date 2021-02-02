@@ -1,7 +1,7 @@
 {
-  "name": "hlth-bot-devops",
+  "name": "healthbot-template-push",
   "version": "1.0.0",
-  "description": "demo of managing azure healthbot with CI/CD",
+  "description": "Github action to upload healthbot templates",
   "main": "dist/index.js",
   "directories": {
     "doc": "docs"
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pjirsa/hlth-bot-devops.git"
+    "url": "git+https://github.com/pjirsa/healthbot-template-push.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Phil Jirsa",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pjirsa/hlth-bot-devops/issues"
+    "url": "https://github.com/pjirsa/healthbot-template-push/issues"
   },
-  "homepage": "https://github.com/pjirsa/hlth-bot-devops#readme",
+  "homepage": "https://github.com/pjirsa/healthbot-template-push#readme",
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",

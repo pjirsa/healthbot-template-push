@@ -193,6 +193,7 @@ const core = __nccwpck_require__(7058);
 const github = __nccwpck_require__(2722);
 const jwt = __nccwpck_require__(8661);
 const rp = __nccwpck_require__(2589);
+const fs = __nccwpck_require__(5747);
 
 try {
   const tenantName = core.getInput('tenant-name');
@@ -204,26 +205,15 @@ try {
     iat: Math.floor(Date.now() / 1000)
   }, jwtSecret);
 
+  const body = fs.readFileSync(core.getInput('template-file'));
+
   const options = {
     method: 'POST',
     uri: `${BASE_URL}api/account/${tenantName}/scenarios`,
     headers: {
         'Authorization': 'Bearer ' + jwtToken
     },
-    body: [
-        {
-            "name":"Hello World",
-            "scenario_trigger":"hello_world",
-            "description":"",
-            "code":"{\n  \"version\": 2,\n  \"steps\": [\n    {\n      \"id\": \"aaa3073dc553-32a44525cced8e2f-2200\",\n      \"type\": \"statement\",\n      \"designer\": {\n        \"xLocation\": 479,\n        \"yLocation\": 196\n      },\n      \"text\": \"Hello World!\"\n    }\n  ]\n}"
-        },
-        {
-            "name":"Greetings",
-            "scenario_trigger":"greetings",
-            "description":"",
-            "code":"{\n  \"version\": 2,\n  \"steps\": [\n    {\n      \"id\": \"aaa3073dc553-32a44525cced8e2f-2200\",\n      \"type\": \"statement\",\n      \"designer\": {\n        \"xLocation\": 479,\n        \"yLocation\": 196\n      },\n      \"text\": \"Greetings!\"\n    }\n  ]\n}"
-        }
-    ],
+    body: body,
     json: true
 };
 
