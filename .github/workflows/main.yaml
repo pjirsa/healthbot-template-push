@@ -13,5 +13,5 @@ jobs:
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.1.4 
     - run: npm install
-    - run: npm install @vercel/ncc
+    - run: sudo npm i -g @vercel/ncc
     - run: ncc build index.js --license licenses.txt
