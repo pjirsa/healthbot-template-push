@@ -7,6 +7,7 @@ const fs = require('fs');
 try {
   const tenantName = core.getInput('tenant-name');
   const jwtSecret = core.getInput('api-secret');
+  const filePath = core.getInput('template-file');
 
   const BASE_URL = "https://us.healthbot.microsoft.com/";
   const jwtToken = jwt.sign({
@@ -14,6 +15,7 @@ try {
     iat: Math.floor(Date.now() / 1000)
   }, jwtSecret);
 
+  console.log(filePath);
   const body = fs.readFileSync(core.getInput('template-file'));
   console.log(body);
 
