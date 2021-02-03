@@ -15,6 +15,7 @@ try {
   }, jwtSecret);
 
   const body = fs.readFileSync(core.getInput('template-file'));
+  console.log(body);
 
   const options = {
     method: 'POST',
