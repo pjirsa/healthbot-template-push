@@ -15,7 +15,7 @@ try {
     iat: Math.floor(Date.now() / 1000)
   }, jwtSecret);
 
-  const bodyraw = fs.readFileSync(core.getInput('template-file'));
+  const bodyraw = fs.readFileSync(filePath);
   const body = JSON.parse(bodyraw);
   console.log(body);
 
