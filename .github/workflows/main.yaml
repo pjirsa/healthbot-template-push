@@ -1,0 +1,17 @@
+on: 
+  push:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: build distro
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v2.1.4 
+    - run: npm install
+    - run: npm i -g @vercel/ncc
+    - run: ncc build index.js --license licenses.txt
