@@ -12,6 +12,6 @@ Example usage:
     template-file: '${{ github.workspace }}/template.json'
 ```
 
-See [pjirsa/azure-healthbot-devops](https://github.com/pjirsa/azure-healthbot-devops) to see an example repo using this action.
+See [pjirsa/azure-healthbot-devops](https://github.com/pjirsa/azure-healthbot-devops) as an example repo using this action.
 
 \* Create Github secrets for `TENANT_NAME` and `API_KEY` specific to your Azure Healthbot instance.
