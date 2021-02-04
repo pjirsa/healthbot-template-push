@@ -1,3 +1,4 @@
+![Build Status](https://github.com/pjirsa/healthbot-template-push/workflows/main/badge.svg)
 # Push Healthbot Scenarios Github Action
 Github action that will publish Azure Healthbot Scenarios defined in a template.json file from your repo.
 
