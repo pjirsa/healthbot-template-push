@@ -22,4 +22,5 @@ jobs:
         git add dist
         git commit -m "Add built distro files"
         git push
+      continue-on-error: true
     
